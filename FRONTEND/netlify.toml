@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "./FRONTEND/index.html"
+  status = 404

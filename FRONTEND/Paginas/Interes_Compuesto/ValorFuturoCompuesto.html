@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../Estilos/Boostrap.css" />
+
+  <title>CABBA</title>
+</head>
+
+<body>
+  <div class="container-fluid bg-primary">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Futuro Compuesto</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Interes Simple
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/FRONTEND/Paginas/Interes_Simple/ValorPresenteSimple.html">Valor
+                      Presente</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/FRONTEND/Paginas/Interes_Simple/ValorFuturoSimple.html">Valor
+                      Futuro</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Interes Compuesto
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item"
+                      href="/FRONTEND/Paginas/Interes_Compuesto/ValorPresenteCompuesto.html">Valor Presente</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/FRONTEND/Paginas/Interes_Compuesto/ValorFuturoCompuesto.html">Valor
+                      Futuro</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <article class="mt-3">
+      <div class="row justify-content-center">
+        <h2 class="text-center">Calculadora</h2>
+      </div>
+      <select class="form-select mt-2" aria-label="Default select example" id="inputGroupSelectValorPresenteSimple">
+        <option value="0" selected>Que desea calcular</option>
+        <option value="1">Valor Futuro</option>
+        <option value="2">Tasa de interes</option>
+        <option value="3">Numero de Periodos</option>
+      </select>
+      <form id="formValorPresenteSimple">
+        <div class="input-group mb-3 mt-3 hide" id="divopc1">
+          <input id="valPresenteSimple" type="number" class="form-control" placeholder="Valor Presente" />
+          <span class="input-group-text">$</span>
+        </div>
+
+        <div class="input-group mb-3 mt-3 hide" id="divopc2">
+          <div class="row justify-content-evenly">
+            <div class="col-7">
+              <input type="number" id="tasaValPresenteSimple" class="form-control" placeholder="Tasa de interes" />
+            </div>
+            <div class="col-5">
+              <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadInteres">
+                <option value="12" selected>Mensual</option>
+                <option value="6">Bimensual</option>
+                <option value="4">Trimestral</option>
+                <option value="2">Semestral</option>
+                <option value="1">Anual</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3 hide" id="divopc3">
+          <div class="row justify-content-evenly">
+            <div class="col-7">
+              <input type="number" id="periodosValorPresenteSimple" class="form-control"
+                placeholder="Numero de periodos" />
+            </div>
+            <div class="col-5">
+              <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadPeriodo">
+                <option value="12" selected>Mensual</option>
+                <option value="6">Bimensual</option>
+                <option value="4">Trimestral</option>
+                <option value="2">Semestral</option>
+                <option value="1">Anual</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3 hide" id="divopc4">
+          <input type="number" id="valFuturoSimple" class="form-control" placeholder="Valor Futuro" />
+          <span class="input-group-text">$</span>
+        </div>
+
+        <div class="input-group mb-3 mt-3 hide" id="divResultado">
+          <input type="number" id="resulPresenteSimple" class="form-control" placeholder="Resultado" disabled />
+        </div>
+
+        <div id="alert"></div>
+
+        <div class="input-group mb-3 mt-3 justify-content-center hide" id="divopc5">
+          <button class="btn btn-primary mb-3 mt-3" id="btnValorFuturoCompuesto">
+            Calcular
+          </button>
+        </div>
+      </form>
+    </article>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center mt-3">
+      <div class="col-12 col-md-10">
+        <div class="card">
+          <div class="card-body">
+            <h2>Fórmula del Valor Futuro Simple</h2>
+            <p>
+              El valor futuro se calcula mediante la fórmula del interés
+              compuesto. En esta página puedes encontrar una calculadora de
+              interés compuesto más completa que permite tener en cuenta
+              también el efecto de aportaciones periódicas.
+              <br />
+              Partiendo de un valor presente (VP), podemos calcular el valor
+              futuro
+              <b>VF</b> al cabo de un número de años <b>n</b> considerando una
+              tasa de interés anual <b>i</b> mediante:
+            </p>
+            <div class="text-center mt-3 mb-2">
+              <img class="img-fluid rounded mx-auto d-block" src="/assets/VF.png" />
+            </div>
+            <p>
+              Por ejemplo, si el valor presente es igual a 10000$ y aplicamos
+              una tasa de interés del 5 %, al cabo de 8 años el valor será
+              igual a:
+            </p>
+            <div class="text-center mt-3 mb-2">
+              <img class="img-fluid rounded mx-auto d-block" src="/assets/ejemploFuturo.png" />
+            </div>
+            <p>
+              Esto significa que si en la actualidad invirtieras 10000$ y se
+              aplicara una tasa de interés del 5 % tendrías 14774.55$ al cabo
+              de 8 años.
+              <br />
+              Esta información puede servirte para tomar decisiones en torno a
+              posibles inversiones. Por ejemplo, si tuvieras que escoger entre
+              recibir 11000$ hoy o 15000$ de aquí a 8 años deberías escoger la
+              primer opción dado que el valor futuro de 11000$ actuales es
+              superior a 15000$ de aquí a 8 años si se asume una tasa de
+              interés del 5%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-3">
+    <p>
+      © Copyright
+      <!-- -->
+      2023
+      <!-- -->
+      · <a href="">Aviso Legal</a> · <a href="">Política de privacidad</a> ·
+      <a href="">Contacto</a>
+    </p>
+  </footer>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="/BACKEND/Main.js" type="module"></script>
+</body>
+
+</html>
