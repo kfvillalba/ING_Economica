@@ -14,15 +14,14 @@ function calcularValorPresente() {
   let periodos = document.getElementById("periodosValorPresenteSimple").value;
   let alerta = document.getElementById("alert");
   let resultado;
-  console.log(tasaActual, tiempoActual, tiempoDestino, tasa);
-
+ 
   if (
     valorFuturo != "" &&
     tasa != "" &&
     periodos != "" &&
     valorPresente == ""
   ) {
-    resultado = valorFuturo / (1 + periodos * tasa); //valor presente
+    resultado = valorFuturo / (1 + (periodos * tasa)); //valor presente
   } else if (
     valorFuturo != "" &&
     tasa == "" &&
@@ -66,7 +65,14 @@ function calcularValorFuturo() {
   let valorFuturo = document.getElementById("valFuturoSimple").value;
   let valorPresente = document.getElementById("valPresenteSimple").value;
   let resulValorPresenteSimple = document.getElementById("resulPresenteSimple");
-  let tasa = document.getElementById("tasaValPresenteSimple").value / 100;
+  let tasaActual = document.getElementById("tasaValPresenteSimple").value / 100;
+  let tiempoActual = document.getElementById(
+    "inputGroupSelectUnidadInteres"
+  ).value;
+  let tiempoDestino = document.getElementById(
+    "inputGroupSelectUnidadPeriodo"
+  ).value;
+  let tasa = transformarTasa(tiempoActual, tasaActual, tiempoDestino);  
   let periodos = document.getElementById("periodosValorPresenteSimple").value;
   let alerta = document.getElementById("alert");
   let resultado;
