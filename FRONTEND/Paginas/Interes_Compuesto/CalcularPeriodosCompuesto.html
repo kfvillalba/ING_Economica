@@ -23,11 +23,32 @@
   <div class="container d-block w-50 justify-content-center">
     <article class="mt-3">
       <form id="formValorPresenteSimple">
-        <h2 class="text-center mt-5 mb-5">Calcular Valor Presente</h2>
-        <div class="input-group mb-3 mt-3 """ id="">
+        <h2 class="text-center mt-5 mb-5">Calcular Número de periodos</h2>
+        <div class="input-group mb-3 mt-3 " mb-3 mt-3 id="">
+          <div class="form-floating">
+            <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadPeriodos">
+              <option value="12" selected>Mensual</option>
+              <option value="6">Bimensual</option>
+              <option value="4">Trimestral</option>
+              <option value="2">Semestral</option>
+              <option value="1">Anual</option>
+            </select>
+            <label for="floatingInput">Seleccione la unidad de tiempo en la que desea recibir los periodos</label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3 " id="">
           <div class="form-floating">
             <input type="number" class="form-control" id="inputValorFuturo" placeholder="f" />
             <label for="floatingInput">Ingrese el valor Futuro</label>
+          </div>
+          <span class="input-group-text">$</span>
+        </div>
+
+        <div class="input-group mb-3 mt-3 " id="">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="inputValorPresente" placeholder="f" />
+            <label for="floatingInput">Ingrese el valor Presente</label>
           </div>
           <span class="input-group-text">$</span>
         </div>
@@ -52,25 +73,6 @@
           </div>
         </div>
 
-        <div class="input-group mb-3 mt-3 " id="">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="inputNumeroPeriodos" placeholder="f" />
-            <label for="floatingInput">Ingrese el numero de periodos</label>
-          </div>
-        </div>
-
-        <div class="input-group mb-3 mt-3 " mb-3 mt-3 id="">
-          <div class="form-floating">
-            <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadPeriodos">
-              <option value="12" selected>Mensual</option>
-              <option value="6">Bimensual</option>
-              <option value="4">Trimestral</option>
-              <option value="2">Semestral</option>
-              <option value="1">Anual</option>
-            </select>
-            <label for="floatingInput">Seleccione la unidad de tiempo de los periodos</label>
-          </div>
-        </div>
         <div class="form-floating">
           <input type="number" class="form-control" id="inputResultado" placeholder="f" disabled />
           <label for="floatingInput">Resultado</label>
@@ -79,7 +81,7 @@
         <div id="alert" class="mt-3"></div>
 
         <div class="input-group mb-3 mt-3 justify-content-center " id="">
-          <button class="btn btn-primary mb-3 mt-3" id="btnValorPresenteCompuesto">
+          <button class="btn btn-primary mb-3 mt-3" id="btnCalcularPeriodosCompuesto">
             Calcular
           </button>
         </div>

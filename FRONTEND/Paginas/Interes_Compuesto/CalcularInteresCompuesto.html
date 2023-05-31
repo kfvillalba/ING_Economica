@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../Estilos/bootstrap.css" />
 
-  <title>Valor Futuro Simple</title>
+  <title>Valor Presente Compuesto</title>
 </head>
 
 <body>
@@ -20,11 +20,31 @@
       </nav>
     </div>
   </div>
-
-  <main class="container d-block w-50 justify-content-center">
+  <div class="container d-block w-50 justify-content-center">
     <article class="mt-3">
       <form id="formValorPresenteSimple">
-        <h2 class="text-center mt-5 mb-5">Calcular Valor Futuro</h2>
+        <h2 class="text-center mt-5 mb-5">Calcular Tasa de Interes</h2>
+        <div class="input-group mb-3 mt-3 " mb-3 mt-3 id="">
+          <div class="form-floating">
+            <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadInteres">
+              <option value="12" selected>Mensual</option>
+              <option value="6">Bimensual</option>
+              <option value="4">Trimestral</option>
+              <option value="2">Semestral</option>
+              <option value="1">Anual</option>
+            </select>
+            <label for="floatingInput">Seleccione la unidad de tiempo en la que desea recibir la tasa de interés</label>
+          </div>
+        </div>
+
+        <div class="input-group mb-3 mt-3 " id="">
+          <div class="form-floating">
+            <input type="number" class="form-control" id="inputValorFuturo" placeholder="f" />
+            <label for="floatingInput">Ingrese el valor Futuro</label>
+          </div>
+          <span class="input-group-text">$</span>
+        </div>
+
         <div class="input-group mb-3 mt-3 " id="">
           <div class="form-floating">
             <input type="number" class="form-control" id="inputValorPresente" placeholder="f" />
@@ -35,31 +55,12 @@
 
         <div class="input-group mb-3 mt-3 " id="">
           <div class="form-floating">
-            <input type="number" class="form-control" id="inputTasaInteres" placeholder="f" />
-            <label for="floatingInput">Ingrese la tasa de interés</label>
-          </div>
-        </div>
-        <div class="input-group mb-3 mt-3 " mb-3 mt-3 id="">
-          <div class="form-floating">
-            <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadInteres">
-              <option value="12" selected>Mensual</option>
-              <option value="6">Bimensual</option>
-              <option value="4">Trimestral</option>
-              <option value="2">Semestral</option>
-              <option value="1">Anual</option>
-            </select>
-            <label for="floatingInput">Seleccione la unidad de tiempo del interés</label>
-          </div>
-        </div>
-
-        <div class="input-group mb-3 mt-3 " id="">
-          <div class="form-floating">
             <input type="number" class="form-control" id="inputNumeroPeriodos" placeholder="f" />
             <label for="floatingInput">Ingrese el numero de periodos</label>
           </div>
         </div>
 
-        <div class="input-group mb-3 mt-3 " mb-3 mt-3 id="">
+        <div class="input-group mb-3 mt-3" mb-3 mt-3>
           <div class="form-floating">
             <select class="form-select" aria-label="Default select example" id="inputGroupSelectUnidadPeriodos">
               <option value="12" selected>Mensual</option>
@@ -71,6 +72,7 @@
             <label for="floatingInput">Seleccione la unidad de tiempo de los periodos</label>
           </div>
         </div>
+
         <div class="form-floating">
           <input type="number" class="form-control" id="inputResultado" placeholder="f" disabled />
           <label for="floatingInput">Resultado</label>
@@ -78,24 +80,49 @@
 
         <div id="alert" class="mt-3"></div>
 
-        <div class="input-group mb-3 mt-3 justify-content-center " id="">
-          <button class="btn btn-primary mb-3 mt-3" id="btnValorFuturoSimple">
+        <div class="input-group mb-3 mt-3 justify-content-center">
+          <button class="btn btn-primary mb-3 mt-3" id="btnCalcularInteresCompuesto">
             Calcular
           </button>
         </div>
       </form>
 
     </article>
-  </main>
-  <div class="container">
-    <div class="row justify-content-center mt-3">
-      <div class="col-12 col-md-10">
-        <div class="card">
-          <div class="card-body">
-            <h2>Fórmula del Valor Futuro Simple</h2>
 
-            <div class="text-center mt-3 mb-2">
-              <img class="img-fluid rounded mx-auto d-block" src="/assets/VFSimple-.png" />
+    <div class="container">
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-10">
+          <div class="card">
+            <div class="card-body">
+              <h2>Fórmula del valor presente</h2>
+              <p>
+                El valor presente se obtiene utilizando de forma inversa la
+                operación del <b>interés compuesto.</b>
+                <br />
+                Partiendo de un valor presente <b>VF</b>, podemos calcular el
+                valor futuro (VF) al cabo de un número de años <b>n</b> t
+                considerando una tasa de interés anual <b>i</b> r mediante:
+              </p>
+              <div class="text-center mt-3 mb-2">
+                <img class="img-fluid rounded mx-auto d-block" src="/assets/VF.png" />
+              </div>
+              <p>
+                Invirtiendo la igualdad anterior podemos expresar el valor
+                presente (VP) en función del valor futuro <b>VF,</b> la tasa
+                de descuento <b>i</b> y el número de años <b>n.</b>
+              </p>
+              <div class="text-center mt-3 mb-2">
+                <img class="img-fluid rounded mx-auto d-block" src="/assets/VP.png" />
+              </div>
+              <p>
+                Por ejemplo, si sabes que dentro de 3 años recibirás un
+                importe de 10000$ y aplicas una tasa de descuento del 5%
+                puedes calcular que el valor actual de este importe es igual
+                a:
+              </p>
+              <div class="text-center mt-3 mb-2">
+                <img class="img-fluid rounded mx-auto d-block" src="/assets/ejemplo.png" />
+              </div>
             </div>
           </div>
         </div>

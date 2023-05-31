@@ -1,58 +1,92 @@
-import Interes_Simple from './Scripts/Interes_Simple/InteresSimple.js'
+// IMPORTS
+import InteresSimple from "./Scripts/Interes_Simple/InteresSimple.js";
+import InteresCompuesto from "./Scripts/Interes_Compuesto/InteresCompuesto.js";
+import PrinterNavbar from "./Scripts/PrinterNavbar.js";
 
-import Interes_Compuesto from './Scripts/Interes_Compuesto/InteresCompuesto.js'
+// VARIABLES
 
-const opcValorPresenteSimple = document.getElementById(
-  'inputGroupSelectValorPresenteSimple'
-)
-const btnValorPresenteSimple = document.getElementById('btnValorPresenteSimple')
-const btnValorFuturoSimple = document.getElementById('btnValorFuturoSimple')
+const formValorPresenteSimple = document.getElementById(
+  "formValorPresenteSimple"
+);
+const SelectCalcular = document.getElementById("SelectCalcular");
 
-const btnValorFuturoCompuesto = document.getElementById(
-  'btnValorFuturoCompuesto'
-)
-const btnValorPresenteCompuesto = document.getElementById(
-  'btnValorPresenteCompuesto'
-)
+// FUNCIONES
 
-if (btnValorPresenteSimple) {
-  btnValorPresenteSimple.addEventListener('click', () => {
-    event.preventDefault()
-    Interes_Simple.calcularValorPresente()
-  })
+function ImprimirResultado(id) {
+  switch (id) {
+    case "btnValorPresenteSimple":
+      InteresSimple.calcularValorPresente();
+      break;
+    case "btnValorPresenteCompuesto":
+      InteresCompuesto.calcularValorPresente();
+      break;
+    case "btnValorFuturoSimple":
+      InteresSimple.calcularValorFuturo();
+      break;
+    case "btnValorFuturoCompuesto":
+      InteresCompuesto.calcularValorFuturo();
+      break;
+    case "btnCalcularInteresSimple":
+      InteresSimple.calcularInteres();
+      break;
+    case "btnCalcularPeriodosSimple":
+      InteresSimple.calcularPeriodos();
+      break;
+    case "btnCalcularInteresCompuesto":
+      InteresCompuesto.calcularInteres();
+      break;
+    case "btnCalcularPeriodosCompuesto":
+      InteresCompuesto.calcularPeriodos();
+      break;
+  }
 }
 
-if (btnValorFuturoSimple) {
-  btnValorFuturoSimple.addEventListener('click', () => {
-    event.preventDefault()
-    Interes_Simple.calcularValorFuturo()
-  })
+function ImprimirFormulario() {
+  switch (SelectCalcular.value) {
+    //NADA
+    case "0":
+      PrinterInteresSimple.PrintNada();
+      break;
+
+    //VALOR PRESENTE
+    case "1":
+      PrinterInteresSimple.PrintValorPresente();
+      break;
+
+    //TASA DE INTERES
+    case "2":
+      PrinterInteresSimple.PrintCalcularInteres();
+      break;
+
+    //NUMERO DE PERIODOS
+    case "3":
+      PrinterInteresSimple.PrintCalcularPeriodos();
+      break;
+
+    case "4":
+      PrinterInteresSimple.PrintValorFuturo();
+      break;
+
+    default:
+      break;
+  }
 }
 
-if (btnValorFuturoCompuesto) {
-  btnValorFuturoCompuesto.addEventListener('click', () => {
-    event.preventDefault()
-    Interes_Compuesto.calcularValorFuturo()
-  })
+//EVENT LISTENERS
+window.onload = () => {
+  console.log("first");
+  PrinterNavbar.PrintNavBar();
+};
+
+if (SelectCalcular) {
+  SelectCalcular.addEventListener("change", () => {
+    ImprimirFormulario();
+  });
 }
 
-if (btnValorPresenteCompuesto) {
-  btnValorPresenteCompuesto.addEventListener('click', () => {
-    event.preventDefault()
-    Interes_Compuesto.calcularValorPresente()
-  })
-}
-
-if (opcValorPresenteSimple) {
-  opcValorPresenteSimple.addEventListener('change', () => {
-    event.preventDefault()
-    Interes_Simple.hide_show_options(opcValorPresenteSimple.value)
-  })
-}
-
-if (opcValorPresenteSimple) {
-  opcValorPresenteSimple.addEventListener('change', () => {
-    event.preventDefault()
-    Interes_Compuesto.hide_show_options(opcValorPresenteSimple.value)
-  })
+if (formValorPresenteSimple) {
+  formValorPresenteSimple.addEventListener("click", (e) => {
+    e.preventDefault();
+    ImprimirResultado(e.target.id);
+  });
 }
