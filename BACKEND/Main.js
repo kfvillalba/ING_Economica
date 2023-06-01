@@ -2,6 +2,7 @@
 import InteresSimple from './Scripts/Interes_Simple/InteresSimple.js'
 import InteresCompuesto from './Scripts/Interes_Compuesto/InteresCompuesto.js'
 import PrinterNavbar from './Scripts/PrinterNavbar.js'
+import GradienteLinear from './Scripts/Gradientes/Gradiente_Lineal.js'
 
 // VARIABLES
 
@@ -38,39 +39,17 @@ function ImprimirResultado(id) {
     case 'btnCalcularPeriodosCompuesto':
       InteresCompuesto.calcularPeriodos()
       break
+    case 'btnCalcularValorFuturoGradienteLineal':
+      GradienteLinear.calcularValorFuturo()
+      break
+    case 'btnCalcularCuotaPeriodicaGradienteLineal':
+      GradienteLinear.calcularCuotaPeriodica()
+      break
+
   }
 }
 
-function ImprimirFormulario() {
-  switch (SelectCalcular.value) {
-    //NADA
-    case '0':
-      PrinterInteresSimple.PrintNada()
-      break
 
-    //VALOR PRESENTE
-    case '1':
-      PrinterInteresSimple.PrintValorPresente()
-      break
-
-    //TASA DE INTERES
-    case '2':
-      PrinterInteresSimple.PrintCalcularInteres()
-      break
-
-    //NUMERO DE PERIODOS
-    case '3':
-      PrinterInteresSimple.PrintCalcularPeriodos()
-      break
-
-    case '4':
-      PrinterInteresSimple.PrintValorFuturo()
-      break
-
-    default:
-      break
-  }
-}
 
 //EVENT LISTENERS
 window.onload = () => {
@@ -86,7 +65,7 @@ if (SelectCalcular) {
 
 if (formValorPresenteSimple) {
   formValorPresenteSimple.addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault()   
     ImprimirResultado(e.target.id)
   })
 }

@@ -87,19 +87,31 @@ function PrintNavBar() {
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Gradiente
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" href="/FRONTEND/Paginas/gradiente/gradienteGeometrico.html">Geometrico</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="/FRONTEND/Paginas/gradiente/gradienteLineal.html">Lineal</a>
-            </li>
-          </ul>
-        </li>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Gradientes
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Frances.html">Gradiente Lineal</a>
+            <ul class="submenu">
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/valorFuturo.html">Calcular Valor Futuro</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/valorPresente.html">Calcular Valor Presente</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/cuotaPeriodica.html">Cálculo	de la	Cuota	Periódica	Uniforme</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Frances/Opcion3.html">Cálculo	del Gradiente</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano.html">Gradiente Geometrico</a>
+            <ul class="submenu">
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion1.html">Opción 1</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion2.html">Opción 2</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion3.html">Opción 3</a></li>
+            </ul>
+          </li>          
+        </ul>
+      </li>
+
       </ul>
     </div>`
   }
