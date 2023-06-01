@@ -1,7 +1,7 @@
 function PrintNavBar() {
-  let navBar = document.getElementById('navbar')
+  let navBar = document.getElementById("navbar");
   if (navBar) {
-    navBar.innerHTML = ''
+    navBar.innerHTML = "";
     navBar.innerHTML = `<div class="container-fluid">
     <a class="navbar-brand" href="#">YUJEKEAL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -102,10 +102,10 @@ function PrintNavBar() {
             </ul>
           </li>
           <li>
-            <a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano.html">Gradiente Geometrico</a>
+            <a class="dropdown-item" href="#">Gradiente Geometrico</a>
             <ul class="submenu">
-              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion1.html">Opción 1</a></li>
-              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion2.html">Opción 2</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Geometrico/valorFuturo.html">Valor Futuro</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Geometrico/valorPresente.html">Valor Presente</a></li>
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion3.html">Opción 3</a></li>
             </ul>
           </li>          
@@ -113,7 +113,7 @@ function PrintNavBar() {
       </li>
 
       </ul>
-    </div>`
+    </div>`;
   }
 }
-export default { PrintNavBar }
+export default { PrintNavBar };

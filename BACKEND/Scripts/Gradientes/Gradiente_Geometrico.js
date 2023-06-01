@@ -15,9 +15,9 @@ function validarCampos() {
     if (inputs[index].value == "") {
       flag++;
       alerta.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert" >
-        <strong>ERROR!</strong> Falta informacion.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>`;
+          <strong>ERROR!</strong> Falta informacion.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>`;
       return false;
     } else if (flag == 0) {
       alerta.innerHTML = "";
@@ -31,8 +31,8 @@ function calcularValorFuturo() {
   let montoConstante = parseFloat(
     document.getElementById("inputMontoConstante").value
   );
-  let montoCrecimiento = parseFloat(
-    document.getElementById("inputMontoCrecimiento").value
+  let PorcentajeCrecimiento = parseFloat(
+    document.getElementById("inputPorcentajeCrecimiento").value / 100
   );
   let periodos = parseFloat(
     document.getElementById("inputNumeroPeriodos").value
@@ -60,15 +60,15 @@ function calcularValorFuturo() {
     switch (tipoGradiente) {
       case "1":
         resultado =
-          montoConstante * ((Math.pow(1 + tasa, periodos) - 1) / tasa) +
-          (montoCrecimiento / tasa) *
-            ((Math.pow(1 + tasa, periodos) - 1) / tasa - periodos);
+          (montoConstante / (tasa - PorcentajeCrecimiento)) *
+          (Math.pow(1 + tasa, periodos) -
+            Math.pow(1 + PorcentajeCrecimiento, periodos));
         break;
       case "2":
         resultado =
-          montoConstante * ((Math.pow(1 + tasa, periodos) - 1) / tasa) -
-          (montoCrecimiento / tasa) *
-            ((Math.pow(1 + tasa, periodos) - 1) / tasa - periodos);
+          (montoConstante / (tasa - PorcentajeCrecimiento)) *
+          (Math.pow(1 + tasa, periodos) +
+            Math.pow(1 + PorcentajeCrecimiento, periodos));
         break;
     }
 
@@ -157,8 +157,8 @@ function calcularValorPresente() {
   let cuotaPeriodica = parseFloat(
     document.getElementById("inputMontoConstante").value
   );
-  let montoCrecimiento = parseFloat(
-    document.getElementById("inputMontoCrecimiento").value
+  let porcentajeCrecimiento = parseFloat(
+    document.getElementById("inputPorcentajeCrecimiento").value
   );
   let periodos = parseFloat(
     document.getElementById("inputNumeroPeriodos").value
@@ -180,23 +180,31 @@ function calcularValorPresente() {
   let alerta = document.getElementById("alert");
   let resultado;
 
-  let c;
-  let a = (1 - Math.pow(1 + tasa, -periodos)) / tasa;
-  let b = periodos / Math.pow(1 + tasa, periodos);
-
-  console.log(convertirTiempo(5, "años", "bimestres"));
-
   // Funcion
 
   if (validarCampos()) {
     switch (tipoGradiente) {
       case "1":
-        c = a - b;
-        resultado = cuotaPeriodica * a + (montoCrecimiento / tasa) * c;
-        break;
+        if (tasa == porcentajeCrecimiento) {
+          resultado = (periodos * cuotaPeriodica) / (1 + tasa);
+          break;
+        } else {
+          resultado =
+            (cuotaPeriodica / (tasa - porcentajeCrecimiento)) *
+            (1 - Math.pow(c, periodos));
+          break;
+        }
       case "2":
-        c = a - b;
-        resultado = cuotaPeriodica * a - (montoCrecimiento / tasa) * c;
+        if (tasa == porcentajeCrecimiento) {
+          resultado = (periodos * cuotaPeriodica) / (1 - tasa);
+          break;
+        } else {
+          resultado =
+            (cuotaPeriodica / (tasa - porcentajeCrecimiento)) *
+            (1 - Math.pow(c, periodos));
+          break;
+        }
+
         break;
     }
 
