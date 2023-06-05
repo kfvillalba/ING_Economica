@@ -22,22 +22,34 @@
       <div class="mt-3">
         <div class="row justify-content-center">
           <h2 class="text-center text-white">
-            Calcular Valor Futuro Gradiente Lineal
+            Calcular Cuota Periódica en Gradiente Lineal
           </h2>
         </div>
         <article class="mt-3">
           <form id="formValorPresenteSimple">
+            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  id="inputGroupSelectTipoValor"
+                >
+                  <option value="1" selected>Valor Futuro</option>
+                  <option value="2">Valor Presente</option>
+                </select>
+                <label for="floatingInput">Seleccione el tipo de Valor</label>
+              </div>
+            </div>
+
             <div class="input-group mb-3 mt-3 hide" id="divopc1">
               <div class="form-floating">
                 <input
                   type="number"
                   class="form-control"
-                  id="inputMontoConstante"
+                  id="inputValor"
                   placeholder="f"
                 />
-                <label for="floatingInput"
-                  >Ingrese el valor de la cuota periódica uniforme</label
-                >
+                <label for="floatingInput">Ingrese el valor</label>
               </div>
               <span class="input-group-text">$</span>
             </div>
@@ -51,10 +63,26 @@
                   placeholder="f"
                 />
                 <label for="floatingInput"
-                  >Ingrese el valor del gradiente</label
+                  >Ingrese el valor de la cuota periódica uniforme</label
                 >
               </div>
               <span class="input-group-text">$</span>
+            </div>
+
+            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  id="inputGroupSelectTipoGradiente"
+                >
+                  <option value="1" selected>Creciente</option>
+                  <option value="2">Decreciente</option>
+                </select>
+                <label for="floatingInput"
+                  >Seleccione el tipo de Gradiente</label
+                >
+              </div>
             </div>
 
             <div class="input-group mb-3 mt-3 hide" id="divopc2">
@@ -121,22 +149,6 @@
               </div>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
-              <div class="form-floating">
-                <select
-                  class="form-select"
-                  aria-label="Default select example"
-                  id="inputGroupSelectTipoGradiente"
-                >
-                  <option value="1" selected>Creciente</option>
-                  <option value="2">Decreciente</option>
-                </select>
-                <label for="floatingInput"
-                  >Seleccione el tipo de Gradiente</label
-                >
-              </div>
-            </div>
-
             <div class="form-floating">
               <input
                 type="number"
@@ -156,7 +168,7 @@
             >
               <button
                 class="btn btn-primary mb-3 mt-3"
-                id="btnCalcularValorFuturoGradienteLineal"
+                id="btnCalcularCuotaAumentoGradienteLineal"
               >
                 Calcular
               </button>

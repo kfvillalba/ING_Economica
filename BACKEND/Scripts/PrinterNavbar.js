@@ -98,7 +98,7 @@ function PrintNavBar() {
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/valorFuturo.html">Calcular Valor Futuro</a></li>
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/valorPresente.html">Calcular Valor Presente</a></li>
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/cuotaPeriodica.html">Cálculo	de la	Cuota	Periódica	Uniforme</a></li>
-              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Frances/Opcion3.html">Cálculo	del Gradiente</a></li>
+              <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Lineal/cuotaGradiente.html">Cálculo	del Gradiente</a></li>
             </ul>
           </li>
           <li>
@@ -106,7 +106,6 @@ function PrintNavBar() {
             <ul class="submenu">
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Geometrico/valorFuturo.html">Valor Futuro</a></li>
               <li><a class="dropdown-item" href="/FRONTEND/Paginas/Gradientes/Gradiente_Geometrico/valorPresente.html">Valor Presente</a></li>
-              <li><a class="dropdown-item" href="/FRONTEND/Paginas/amortizacion/Americano/Opcion3.html">Opción 3</a></li>
             </ul>
           </li>          
         </ul>

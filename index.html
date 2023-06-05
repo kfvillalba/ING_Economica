@@ -1,158 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/FRONTEND/Estilos/bootstrap.css" />
+    <title>Inicio</title>
+  </head>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/FRONTEND/Estilos/bootstrap.css" />
+  <body>
+    <div class="container-fluid bg-custom">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar"></nav>
+      </div>
+    </div>
 
-  <title>Inicio</title>
-</head>
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/Imagen6.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Formula del general Del interés Compuesto</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/imagen7.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Formula del general Del interés simple</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/gg.png" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Estudiantes</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-<body>
-  <div class="container-fluid bg-primary">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-
-      </nav>
-    </div>
-  </div>
-
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../assets/Imagen6.png" class="d-block w-100" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Formula del general Del interés Compuesto</h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/assets/imagen7.png" class="d-block w-100" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Formula del general Del interés simple</h5>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/gg.png" class="d-block w-100" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Estudiantes</h5>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <div class="container">
-    <div class="row justify-content-center mt-3">
-      <div class="col-12 col-md-10">
-        <br />
-        <h1 class="text-center">Ingeniería Económica</h1>
-        <br />
-        <div class="card bg-light">
-          <div class="card-body">
-            <h2>¿Qué son las matemáticas financieras y para qué sirven?</h2>
-            <p>
-              Las <b>matemáticas financieras</b> son las
-              <b>matemáticas aplicadas a las finanzas.</b> Conforman en este
-              aspecto una serie de herramientas cuyo objetivo último vendría a
-              ser determinar
-              <b>la evolución del valor del dinero en relación al tiempo</b> y
-              analizar sus implicaciones, utilizando para ello las tasas de
-              interés.
-            </p>
-            <p>
-              La aplicación práctica de las matemáticas financieras en el
-              devenir cotidiano tanto de las personas físicas como de las
-              empresas resulta fundamental, ya que su uso adecuado repercute
-              directamente en las finanzas individuales y/o empresariales.
-            </p>
-            <div class="text-center mt-3 mb-2">
-              <img class="img-fluid rounded mx-auto d-block" src="assets/Imagen2.jpg" />
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-10">
+          <br />
+          <h1 class="text-center text-white">Ingeniería Económica</h1>
+          <br />
+          <div class="card bg-light">
+            <div class="card-body">
+              <h2>¿Qué son las matemáticas financieras y para qué sirven?</h2>
+              <p>
+                Las <b>matemáticas financieras</b> son las
+                <b>matemáticas aplicadas a las finanzas.</b> Conforman en este
+                aspecto una serie de herramientas cuyo objetivo último vendría a
+                ser determinar
+                <b>la evolución del valor del dinero en relación al tiempo</b> y
+                analizar sus implicaciones, utilizando para ello las tasas de
+                interés.
+              </p>
+              <p>
+                La aplicación práctica de las matemáticas financieras en el
+                devenir cotidiano tanto de las personas físicas como de las
+                empresas resulta fundamental, ya que su uso adecuado repercute
+                directamente en las finanzas individuales y/o empresariales.
+              </p>
+              <div class="text-center mt-3 mb-2">
+                <img
+                  class="img-fluid rounded mx-auto d-block"
+                  src="assets/Imagen2.jpg"
+                />
+              </div>
+              <h2>¿Qué son las matemáticas financieras?</h2>
+              <p>
+                Podemos definirlas como aquella
+                <b
+                  >rama de las matemáticas aplicadas que se ocupa del estudio de
+                  las operaciones financieras</b
+                >, en especial aquellas en las que tienen lugar intercambios de
+                flujos de dinero cuyo valor va sufriendo variaciones
+                cuantitativas en el tiempo debido a la generación de intereses.
+              </p>
+              <p>
+                Las matemáticas financieras
+                <b
+                  >se ocupan de calcular el valor y rentabilidad de los diversos
+                  productos existentes en los mercados financieros</b
+                >, tales como bonos, depósitos, préstamos o acciones, entre
+                otros. Están orientadas en tal sentido hacia un estudio del
+                valor del dinero como medio para la obtención de un determinado
+                rendimiento, combinando para ello como elementos claves el
+                capital, la tasa de interés y el tiempo, a través de técnicas de
+                evaluación que faciliten la toma de decisiones de inversión.
+                Entre las principales herramientas utilizadas en este campo
+                estarían la estadística, la probabilidad y el cálculo
+                diferencial.
+              </p>
+              <p>
+                Dentro de lo que vienen a ser las matemáticas financieras en su
+                conjunto, conviene realizar una diferenciación según se enfoquen
+                hacia operaciones financieras simples u operaciones financieras
+                complejas.
+              </p>
+              <h2>Matemáticas financieras simples</h2>
+              <p>
+                Se consideran así las que analizan la evolución de los flujos de
+                dinero provenientes de un solo capital al inicio de la operación
+                financiera y otro al final de la misma. Comprende en este
+                aspecto el estudio de las operaciones de descuento e interés,
+                esto es, la forma en la que se remunera el capital. El interés
+                puede ser a su vez simple o compuesto, según se calcule
+                únicamente sobre el capital inicial durante toda la vigencia del
+                crédito o inversión (interés simple) o se vaya acumulando de
+                forma periódica al capital original y los intereses devengados
+                para generar un nuevo capital (interés compuesto).
+              </p>
             </div>
-            <h2>¿Qué son las matemáticas financieras?</h2>
-            <p>
-              Podemos definirlas como aquella
-              <b>rama de las matemáticas aplicadas que se ocupa del estudio de
-                las operaciones financieras</b>, en especial aquellas en las que tienen lugar intercambios de
-              flujos de dinero cuyo valor va sufriendo variaciones
-              cuantitativas en el tiempo debido a la generación de intereses.
-            </p>
-            <p>
-              Las matemáticas financieras
-              <b>se ocupan de calcular el valor y rentabilidad de los diversos
-                productos existentes en los mercados financieros</b>, tales como bonos, depósitos, préstamos o acciones,
-              entre
-              otros. Están orientadas en tal sentido hacia un estudio del
-              valor del dinero como medio para la obtención de un determinado
-              rendimiento, combinando para ello como elementos claves el
-              capital, la tasa de interés y el tiempo, a través de técnicas de
-              evaluación que faciliten la toma de decisiones de inversión.
-              Entre las principales herramientas utilizadas en este campo
-              estarían la estadística, la probabilidad y el cálculo
-              diferencial.
-            </p>
-            <p>
-              Dentro de lo que vienen a ser las matemáticas financieras en su
-              conjunto, conviene realizar una diferenciación según se enfoquen
-              hacia operaciones financieras simples u operaciones financieras
-              complejas.
-            </p>
-            <h2>Matemáticas financieras simples</h2>
-            <p>
-              Se consideran así las que analizan la evolución de los flujos de
-              dinero provenientes de un solo capital al inicio de la operación
-              financiera y otro al final de la misma. Comprende en este
-              aspecto el estudio de las operaciones de descuento e interés,
-              esto es, la forma en la que se remunera el capital. El interés
-              puede ser a su vez simple o compuesto, según se calcule
-              únicamente sobre el capital inicial durante toda la vigencia del
-              crédito o inversión (interés simple) o se vaya acumulando de
-              forma periódica al capital original y los intereses devengados
-              para generar un nuevo capital (interés compuesto).
-            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="text-center mt-3">
-    <div class="container-fluid justify-content-center">
-      <p>
-        © Copyright
-        <!-- -->
-        2023
-        <!-- -->
-        · <a href="">Aviso Legal</a> · <a href="">Política de privacidad</a> ·
-        <a href="">Contacto</a>
-      </p>
-    </div>
-  </footer>
+    <footer class="text-center mt-3">
+      <div class="container-fluid justify-content-center">
+        <p>
+          © Copyright
+          <!-- -->
+          2023
+          <!-- -->
+          · <a href="">Aviso Legal</a> · <a href="">Política de privacidad</a> ·
+          <a href="">Contacto</a>
+        </p>
+      </div>
+    </footer>
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="/BACKEND/Main.js" type="module"></script>
-</body>
-
+    <script src="/BACKEND/Main.js" type="module"></script>
+  </body>
 </html>
