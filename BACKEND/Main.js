@@ -43,17 +43,20 @@ function ImprimirResultado(id) {
     case "btnCalcularValorFuturoGradienteLineal":
       GradienteLinear.calcularValorFuturo();
       break;
-    case "btnCalcularValorFuturoGradienteGeometrico":
-      GradienteGeometrico.calcularValorFuturo();
-      break;
-    case "btnCalcularValorPresenteGradienteGeometrico":
-      GradienteGeometrico.calcularValorPresente();
-      break;
     case "btnCalcularCuotaPeriodicaGradienteLineal":
       GradienteLinear.calcularCuotaPeriodica();
       break;
     case "btnCalcularValorPresenteGradienteLineal":
       GradienteLinear.calcularValorPresente();
+      break;
+    case "btnCalcularCuotaAumentoGradienteLineal":
+      GradienteLinear.calcularGradiente();
+      break;
+    case "btnCalcularValorFuturoGradienteGeometrico":
+      GradienteGeometrico.calcularValorFuturo();
+      break;
+    case "btnCalcularValorPresenteGradienteGeometrico":
+      GradienteGeometrico.calcularValorPresente();
       break;
   }
 }
