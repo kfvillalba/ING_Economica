@@ -1,9 +1,9 @@
 function PrintNavBar() {
-  let navBar = document.getElementById("navbar");
+  let navBar = document.getElementById('navbar')
   if (navBar) {
-    navBar.innerHTML = "";
+    navBar.innerHTML = ''
     navBar.innerHTML = `<div class="container-fluid">
-    <a class="navbar-brand" href="#">YUJEKEAL</a>
+    <a class="navbar-brand" href="#">Spex Co</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -112,7 +112,7 @@ function PrintNavBar() {
       </li>
 
       </ul>
-    </div>`;
+    </div>`
   }
 }
-export default { PrintNavBar };
+export default { PrintNavBar }
