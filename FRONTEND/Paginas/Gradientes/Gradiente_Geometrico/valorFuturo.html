@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/FRONTEND/Estilos/bootstrap.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Gradiente</title>
   </head>
@@ -27,7 +28,11 @@
         </div>
         <article class="mt-3">
           <form id="formValorPresenteSimple">
-            <div class="input-group mb-3 mt-3 hide" id="divopc1">
+            <div
+              data-aos="fade-up-right"
+              class="input-group mb-3 mt-3 hide"
+              id="divopc1"
+            >
               <div class="form-floating">
                 <input
                   type="number"
@@ -42,7 +47,11 @@
               <span class="input-group-text">$</span>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" id="divopc1">
+            <div
+              data-aos="fade-up-left"
+              class="input-group mb-3 mt-3 hide"
+              id="divopc1"
+            >
               <div class="form-floating">
                 <input
                   type="number"
@@ -57,7 +66,11 @@
               <span class="input-group-text">$</span>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" id="divopc2">
+            <div
+              data-aos="fade-up-right"
+              class="input-group mb-3 mt-3 hide"
+              id="divopc2"
+            >
               <div class="form-floating">
                 <input
                   type="number"
@@ -69,7 +82,14 @@
               </div>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
+            <div
+              data-aos="fade-up-left"
+              class="input-group mb-3 mt-3 hide"
+              mb-3
+              mt-3
+              hide
+              id="divopc2"
+            >
               <div class="form-floating">
                 <select
                   class="form-select"
@@ -88,7 +108,11 @@
               </div>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" id="divopc2">
+            <div
+              data-aos="fade-up-right"
+              class="input-group mb-3 mt-3 hide"
+              id="divopc2"
+            >
               <div class="form-floating">
                 <input
                   type="number"
@@ -100,7 +124,14 @@
               </div>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
+            <div
+              data-aos="fade-up-left"
+              class="input-group mb-3 mt-3 hide"
+              mb-3
+              mt-3
+              hide
+              id="divopc2"
+            >
               <div class="form-floating">
                 <select
                   class="form-select"
@@ -119,7 +150,14 @@
               </div>
             </div>
 
-            <div class="input-group mb-3 mt-3 hide" mb-3 mt-3 hide id="divopc2">
+            <div
+              data-aos="fade-up-right"
+              class="input-group mb-3 mt-3 hide"
+              mb-3
+              mt-3
+              hide
+              id="divopc2"
+            >
               <div class="form-floating">
                 <select
                   class="form-select"
@@ -135,7 +173,7 @@
               </div>
             </div>
 
-            <div class="form-floating">
+            <div data-aos="fade-up-left" class="form-floating">
               <input
                 type="number"
                 class="form-control"
@@ -185,5 +223,9 @@
     ></script>
 
     <script src="/BACKEND/Main.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
   </body>
 </html>

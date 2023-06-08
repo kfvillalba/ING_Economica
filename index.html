@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/FRONTEND/Estilos/bootstrap.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Inicio</title>
   </head>
 
@@ -108,7 +109,7 @@
           <br />
           <h1 class="text-center text-white">Ingeniería Económica</h1>
           <br />
-          <div class="card bg-light">
+          <div data-aos="zoom-in" class="card">
             <div class="card-body">
               <h2>¿Qué son las matemáticas financieras y para qué sirven?</h2>
               <p>
@@ -170,7 +171,7 @@
 
       <div class="row mt-5">
         <div class="col-12 col-md-6">
-          <div class="card mb-3">
+          <div data-aos="fade-down-right" class="card mb-3">
             <div class="card-body">
               <h5 class="card-title text-center">Valor Futuro Compuesto</h5>
             </div>
@@ -204,7 +205,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="card mb-3">
+          <div data-aos="fade-up-left" class="card mb-3">
             <div class="card-body">
               <h5 class="card-title text-center">Valor Futuro Simple</h5>
             </div>
@@ -241,7 +242,7 @@
 
       <div class="row mt-5">
         <div class="col-12 col-md-6">
-          <div class="card mb-3">
+          <div data-aos="fade-down-right" class="card mb-3">
             <div class="card-body">
               <h5 class="card-title text-center">Amortización</h5>
             </div>
@@ -274,7 +275,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="card mb-3">
+          <div data-aos="fade-up-left" class="card mb-3">
             <div class="card-body">
               <h5 class="card-title text-center">Gradiente</h5>
             </div>
@@ -328,7 +329,10 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
     <script src="/BACKEND/Main.js" type="module"></script>
   </body>
 </html>
